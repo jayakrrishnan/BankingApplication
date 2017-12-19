@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 13, 2017 4:54:03 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.training.entity.Transaction" table="BANK_TRANSACTION">
+        <id name="transactionId" type="long">
+            <column name="TRANSACTIONID" />
+            <generator class="increment" />
+        </id>
+        <property name="fromAccount" type="long">
+            <column name="FROMACCOUNT" />
+        </property>
+        <property name="amount" type="double">
+            <column name="AMOUNT" />
+        </property>
+        <property name="toAccount" type="long">
+            <column name="TOACCOUNT" />
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

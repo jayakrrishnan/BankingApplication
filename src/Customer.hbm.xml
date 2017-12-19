@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 14, 2017 7:37:14 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <joined-subclass name="com.training.entity.Customer" extends="com.training.entity.User" table="BANK_CUSTOMER" lazy="false">
+        <key>
+            <column name="USERID" />
+        </key>
+        <property name="customerName" type="java.lang.String">
+            <column name="CUSTOMERNAME" />
+        </property>
+        <property name="zipCode" type="long">
+            <column name="ZIPCODE" />
+        </property>
+        <property name="balance" type="double">
+            <column name="BALANCE" />
+        </property>
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+        <property name="mobileNumber" type="long">
+            <column name="MOBILENUMBER" />
+        </property>
+        <property name="accountType" type="java.lang.String">
+            <column name="ACCOUNTTYPE" />
+        </property>
+        <property name="addressLine1" type="java.lang.String">
+            <column name="ADDRESSLINE1" />
+        </property>
+        <property name="branchName" type="java.lang.String">
+            <column name="BRANCHNAME" />
+        </property>
+        <property name="addressLine2" type="java.lang.String">
+            <column name="ADDRESSLINE2" />
+        </property>
+        <property name="accountNumber" type="long">
+            <column name="ACCOUNTNUMBER" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>
